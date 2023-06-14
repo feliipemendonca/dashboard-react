@@ -35,7 +35,7 @@ root.render(
         <BrowserRouter>
             <ScrollToTop/>
             <Routes>
-                <Route path="*" element={<Login/>} />
+                <Route path="/" element={<Login/>} />
                 {getRoutes()}
             </Routes>
         </BrowserRouter>

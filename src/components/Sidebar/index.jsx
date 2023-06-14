@@ -14,15 +14,16 @@ export const SiderBar = props => {
     };    
     // creates the links that appear in the left menu / Sidebar
     const createLinks = (routes) => {
-        return routes.map((prop, key) => {
-            return (
+        return routes.filter(route => route.layout !== '/crud').map((prop, key) => {
+            return ( 
                 <NavItem key={key}>
-                    <NavLink to={prop.layout + prop.path} tag={NavLinkRRD} onClick={closeCollapse}>
+                    <NavLink to={prop.path} tag={NavLinkRRD} onClick={closeCollapse}>
                         <i className={prop.icon} />
                         {prop.name}
                     </NavLink>
                 </NavItem>
             );
+            
         });
     };
 

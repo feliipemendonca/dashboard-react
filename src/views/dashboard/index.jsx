@@ -1,24 +1,14 @@
+import { CardHeaders } from '../../components/Cards/Header'
 import { DashboadLayout } from '../../templates/DashboadLayout'
-import { Card, CardHeader, Table, Row, Container, Button } from "reactstrap"
+import { Card, Table, Container } from "reactstrap"
 
 
 export const Dashboard = _=> {
     return(
         <DashboadLayout>
             <Container fluid className='mt--5'>
-                <Card className="shadow">
-                    <CardHeader className="border-0">
-                        <Row className="align-items-center">
-                            <div className="col">
-                                <h3 className="mb-0">Page visits</h3>
-                            </div>
-                            <div className="col text-right">
-                                <Button color="primary" href="#pablo" onClick={(e) => e.preventDefault()} size="sm">
-                                    See all
-                                </Button>
-                            </div>
-                        </Row>
-                    </CardHeader>
+                <Card className='shadow'>
+                    <CardHeaders title="initPage" titleButton="Adicionar" link="/crud/create" />
                     <Table className="align-items-center table-flush" responsive>
                         <thead className="thead-light">
                             <tr>
